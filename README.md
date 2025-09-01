@@ -57,4 +57,4 @@ Shutdown scheduled for ...
 
 
 #Punto 2
-cree un script llamado backup.sh que reciba como argumento la ruta de una carpeta y genere una copia comprimida de su contenido; el script debe validar que la carpeta exista, mostrar un mensaje de confirmacion antes de iniciar, crear un archivo comprimido con formato .tar.gz cuyo nombre incluya la fecha actual 
+cree un script llamado backup.sh que reciba como argumento la ruta de una carpeta y genere una copia comprimida de su contenido; el script debe validar que la carpeta exista, mostrar un mensaje de confirmacion antes de iniciar, crear un archivo comprimido con formato .tar.gz cuyo nombre incluya la fecha actual (ejemplo: respaldo_2025-09-01.tar.gz) y guardarlo en la misma ubicacion donde se ejecuto el script; pruebe su funcionamiento con un ejemplo de ejecucion como ./backup.sh documentos
