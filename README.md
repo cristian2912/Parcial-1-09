@@ -118,6 +118,12 @@ Se creará una copia comprimida de la carpeta: documentos
 ¿Desea continuar? (s/n): s
 Respaldo creado exitosamente: respaldo_2025-09-01.tar.gz
 ```
+Evidencia:
+
+
+<img width="498" height="316" alt="image" src="https://github.com/user-attachments/assets/4f9fc585-9114-4b9d-ac8d-2fce533c14ad" />
+
+
 
 # punto 6
 Explique para que sirven los comandos:
