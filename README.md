@@ -13,25 +13,25 @@ codigo:
 ```
 #!/bin/bash
 
-# Verificar que el usuario ingrese un argumento
+# verificar que este un argumento
 if [ -z "$1" ]; then
     echo "Uso: $0 <minutos>"
     exit 1
 fi
 
-# Guardar el valor del primer argumento
+# guardar el valor del argu
 MINUTOS=$1
 
-# Verificar que sea un número entero
+# que sea n entero
 if ! [[ $MINUTOS =~ ^[0-9]+$ ]]; then
-    echo "Error: El parámetro debe ser un número entero."
+    echo "Error: El parametro debe ser un numero entero."
     exit 1
 fi
 
-# Mostrar mensaje en pantalla
-echo "El equipo se apagará en $MINUTOS minutos."
+# mostrar mensaje
+echo "El equipo se apagara en $MINUTOS minutos."
 
-# Programar el apagado
+# programar el apagado
 sudo shutdown -h +$MINUTOS
 ```
 Permisos:
@@ -44,7 +44,7 @@ Ejemplo 5mn:
 ```
 Salida
 ```
-El equipo se apagará en 5 minutos.
+El equipo se apagara en 5 minutos.
 ```
 Programar el apagado 
 ```
@@ -58,3 +58,6 @@ Shutdown scheduled for ...
 
 #Punto 2
 cree un script llamado backup.sh que reciba como argumento la ruta de una carpeta y genere una copia comprimida de su contenido; el script debe validar que la carpeta exista, mostrar un mensaje de confirmacion antes de iniciar, crear un archivo comprimido con formato .tar.gz cuyo nombre incluya la fecha actual (ejemplo: respaldo_2025-09-01.tar.gz) y guardarlo en la misma ubicacion donde se ejecuto el script; pruebe su funcionamiento con un ejemplo de ejecucion como ./backup.sh documentos
+
+# Solucion
+
