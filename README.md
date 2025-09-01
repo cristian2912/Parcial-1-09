@@ -70,7 +70,7 @@ codigo:
 ```
 #!/bin/bash
 
-# Verificar que se haya pasado un argumento
+
 if [ -z "$1" ]; then
     echo "Uso: $0 <ruta_de_la_carpeta>"
     exit 1
@@ -78,13 +78,12 @@ fi
 
 CARPETA=$1
 
-# Validar que la carpeta exista
+
 if [ ! -d "$CARPETA" ]; then
     echo "Error: La carpeta '$CARPETA' no existe."
     exit 1
 fi
 
-# Confirmación antes de iniciar
 echo "Se creará una copia comprimida de la carpeta: $CARPETA"
 read -p "¿Desea continuar? (s/n): " CONFIRMAR
 
@@ -93,14 +92,11 @@ if [[ "$CONFIRMAR" != "s" && "$CONFIRMAR" != "S" ]]; then
     exit 0
 fi
 
-# Generar nombre del respaldo con la fecha actual
 FECHA=$(date +%Y-%m-%d)
 NOMBRE="respaldo_${FECHA}.tar.gz"
 
-# Crear el archivo comprimido en la carpeta actual
 tar -czf "$NOMBRE" -C "$(dirname "$CARPETA")" "$(basename "$CARPETA")"
 
-# Mensaje final
 echo "Respaldo creado exitosamente: $NOMBRE"
 
 ```
@@ -110,11 +106,11 @@ chmod +x backup.sh
 ```
 ejemplo:
 ```
-./backup.sh documentos
+./backup.sh Documents
 ```
 salida:
 ```
-Se creará una copia comprimida de la carpeta: documentos
+Se creara una copia comprimida de la carpeta: Documents
 ¿Desea continuar? (s/n): s
 Respaldo creado exitosamente: respaldo_2025-09-01.tar.gz
 ```
@@ -142,15 +138,15 @@ ejemplos 1, 2 y 3:
    <img width="577" height="283" alt="image" src="https://github.com/user-attachments/assets/5d6180d7-6964-4c7a-abcc-51da8023d6f4" />
 
 
-4. rm: sirve para eliminar archivos y directorios en sistemas operativos tipo Unix.
+4. rm: sirve para eliminar archivos y directorios en sistemas operativos tipo Unix. Ej: rm -i docs/reporte_final.txt
 
-5. mv: sirve para mover archivos y directorios de un lugar a otro y también para renombrar archivos o directorios, ya sea dentro del mismo directorio o en uno distinto
+5. mv: sirve para mover archivos y directorios de un lugar a otro y también para renombrar archivos o directorios, ya sea dentro del mismo directorio o en uno distinto. Ej: mv scripts/app.sh docs/
 
-6. wget: sirve para descargar archivos y contenido de internet, principalmente desde la terminal de línea de comandos
+6. wget: sirve para descargar archivos y contenido de internet, principalmente desde la terminal de línea de comandos Ej:  descargar un archivo específico de internet, como una imagen o un documento, escribiendo wget seguido de la URL del archivo
 
-7. traceroute:sirve para diagnosticar problemas en redes, identificando la ruta que los paquetes de datos toman desde un origen hasta un destino y mostrando la latencia y posibles fallos en cada «salto» o enrutador intermedio
+7. traceroute:sirve para diagnosticar problemas en redes, identificando la ruta que los paquetes de datos toman desde un origen hasta un destino y mostrando la latencia y posibles fallos en cada «salto» o enrutador intermedio Ej:diagnosticar la lentitud al cargar una página web o identificar dónde falla una conexión de red
 
-9. netstat -i:Muestra todas las conexiones TCP activas y los puertos TCP y UDP en los que escucha el equipo
+8. netstat -i:Muestra todas las conexiones TCP activas y los puertos TCP y UDP en los que escucha el equipo Ej: ver todas las conexiones de red activas, los puertos que están escuchando y la información numérica de direcciones y puertos es netstat -an
 
 
 # punto 7
@@ -158,6 +154,11 @@ ejemplos 1, 2 y 3:
 <img width="1518" height="651" alt="image" src="https://github.com/user-attachments/assets/fbaf18b4-0c4b-4324-be3d-dc390dae1e51" />
 
 # Solucion:
+
+<img width="554" height="944" alt="image" src="https://github.com/user-attachments/assets/591e73e2-4f8d-4fbb-9ccd-7eda792bbf1d" />
+
+
+
 
 
 
