@@ -104,7 +104,20 @@ tar -czf "$NOMBRE" -C "$(dirname "$CARPETA")" "$(basename "$CARPETA")"
 echo "Respaldo creado exitosamente: $NOMBRE"
 
 ```
-
+permisos:
+```
+chmod +x backup.sh
+```
+ejemplo:
+```
+./backup.sh documentos
+```
+salida:
+```
+Se creará una copia comprimida de la carpeta: documentos
+¿Desea continuar? (s/n): s
+Respaldo creado exitosamente: respaldo_2025-09-01.tar.gz
+```
 
 # punto 6
 Explique para que sirven los comandos:
