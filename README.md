@@ -90,3 +90,6 @@ ejemplos 1, 2 y 3:
 7. traceroute:sirve para diagnosticar problemas en redes, identificando la ruta que los paquetes de datos toman desde un origen hasta un destino y mostrando la latencia y posibles fallos en cada «salto» o enrutador intermedio
 
 9. netstat -i:Muestra todas las conexiones TCP activas y los puertos TCP y UDP en los que escucha el equipo
+
+
+# punto 7
