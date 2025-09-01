@@ -5,6 +5,47 @@ Cree un archivo de sript llamado apagar.sh que permita programar el apagado del 
 
 # Solución
 
+terminal:
+
+nano apagar.sh
+#!/bin/bash
+
+# Verificar que el usuario ingrese un argumento
+if [ -z "$1" ]; then
+    echo "Uso: $0 <minutos>"
+    exit 1
+fi
+
+# Guardar el valor del primer argumento
+MINUTOS=$1
+
+# Verificar que sea un número entero
+if ! [[ $MINUTOS =~ ^[0-9]+$ ]]; then
+    echo "Error: El parámetro debe ser un número entero."
+    exit 1
+fi
+
+# Mostrar mensaje en pantalla
+echo "El equipo se apagará en $MINUTOS minutos."
+
+# Programar el apagado
+sudo shutdown -h +$MINUTOS
+
+permisos
+
+chmod +x apagar.sh
+
+ejemplo 5mn
+./apagar.sh 5
+
+salida
+El equipo se apagará en 5 minutos.
+
+se programa el apagado con 
+
+Shutdown scheduled for ...
+
 
 
 #Punto 2
+cree un script llamado backup.sh que reciba como argumento la ruta de una carpeta y genere una copia comprimida de su contenido; el script debe validar que la carpeta exista, mostrar un mensaje de confirmacion antes de iniciar, crear un archivo comprimido con formato .tar.gz cuyo nombre incluya la fecha actual 
