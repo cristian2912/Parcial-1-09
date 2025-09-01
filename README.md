@@ -50,6 +50,8 @@ Programar el apagado
 ```
 Shutdown scheduled for ...
 ```
+#EVIDENCIAS:
+<img width="677" height="369" alt="image" src="https://github.com/user-attachments/assets/1dc65d90-185a-4aca-aecc-3496e206be3b" />
 
 
 #Punto 2
