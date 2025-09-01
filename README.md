@@ -148,3 +148,10 @@ ejemplos 1, 2 y 3:
 
 
 # punto 7
+
+<img width="1518" height="651" alt="image" src="https://github.com/user-attachments/assets/fbaf18b4-0c4b-4324-be3d-dc390dae1e51" />
+
+# Solucion:
+
+
+
