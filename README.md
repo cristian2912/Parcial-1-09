@@ -6,8 +6,11 @@ Cree un archivo de sript llamado apagar.sh que permita programar el apagado del 
 # Solución
 
 terminal:
-
+```
 nano apagar.sh
+```
+codigo:
+```
 #!/bin/bash
 
 # Verificar que el usuario ingrese un argumento
@@ -30,21 +33,23 @@ echo "El equipo se apagará en $MINUTOS minutos."
 
 # Programar el apagado
 sudo shutdown -h +$MINUTOS
-
-permisos
-
+```
+Permisos:
+```
 chmod +x apagar.sh
-
-ejemplo 5mn
+```
+Ejemplo 5mn:
+```
 ./apagar.sh 5
-
-salida
+```
+Salida
+```
 El equipo se apagará en 5 minutos.
-
-se programa el apagado con 
-
+```
+Programar el apagado 
+```
 Shutdown scheduled for ...
-
+```
 
 
 #Punto 2
