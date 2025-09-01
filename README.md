@@ -60,8 +60,50 @@ Shutdown scheduled for ...
 cree un script llamado backup.sh que reciba como argumento la ruta de una carpeta y genere una copia comprimida de su contenido; el script debe validar que la carpeta exista, mostrar un mensaje de confirmacion antes de iniciar, crear un archivo comprimido con formato .tar.gz cuyo nombre incluya la fecha actual (ejemplo: respaldo_2025-09-01.tar.gz) y guardarlo en la misma ubicacion donde se ejecuto el script; pruebe su funcionamiento con un ejemplo de ejecucion como ./backup.sh documentos
 
 # Solucion
+terminal:
+```
+nano backup.sh
 
+```
+codigo:
 
+```
+#!/bin/bash
+
+# Verificar que se haya pasado un argumento
+if [ -z "$1" ]; then
+    echo "Uso: $0 <ruta_de_la_carpeta>"
+    exit 1
+fi
+
+CARPETA=$1
+
+# Validar que la carpeta exista
+if [ ! -d "$CARPETA" ]; then
+    echo "Error: La carpeta '$CARPETA' no existe."
+    exit 1
+fi
+
+# Confirmación antes de iniciar
+echo "Se creará una copia comprimida de la carpeta: $CARPETA"
+read -p "¿Desea continuar? (s/n): " CONFIRMAR
+
+if [[ "$CONFIRMAR" != "s" && "$CONFIRMAR" != "S" ]]; then
+    echo "Operación cancelada."
+    exit 0
+fi
+
+# Generar nombre del respaldo con la fecha actual
+FECHA=$(date +%Y-%m-%d)
+NOMBRE="respaldo_${FECHA}.tar.gz"
+
+# Crear el archivo comprimido en la carpeta actual
+tar -czf "$NOMBRE" -C "$(dirname "$CARPETA")" "$(basename "$CARPETA")"
+
+# Mensaje final
+echo "Respaldo creado exitosamente: $NOMBRE"
+
+```
 
 
 # punto 6
